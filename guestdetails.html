@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+
+        <div id="lightningout"></div>
+        <script src="https://marriottintl--gpsdev.sandbox.my.site.com/SPOG/lightning/lightning.out.js"></script>
+      
+        <script>
+            $Lightning.use(
+                'c:reservationList', // name of the Lightning app
+                function () {
+                    // Callback once framework and app loaded
+                    $Lightning.createComponent(
+                        'c:spogs_reservationListView', // top-level component of your app
+                        {"sId" : '!ARUAQCU8YjFpjZc6yRev9.01zaTG2ckGYxT_qATuQc7QThxjC4b3_qOOpJGoYFbDeywSEuumO_oatPMsjC2HUGT5Dek34jAp'}, // attributes to set on the component when created
+                        'lightningout', // the DOM location to insert the component
+                        function (cmp) {
+                            // callback when component is created and active on the page
+                        }
+                    );
+                },
+                'https://marriottintl--gpsdev.sandbox.my.site.com/SPOG' // Site endpoint
+            );
+        </script>
+    </body>
+</html>
